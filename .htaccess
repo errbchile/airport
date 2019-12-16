@@ -1,0 +1,6 @@
+# Example with domain name
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^flightsys.cl$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.flightsys.cl$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
